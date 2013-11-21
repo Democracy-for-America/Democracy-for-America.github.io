@@ -581,8 +581,8 @@ forms.required = function() {
     else {
         if ( ak.form.email ) required.push('email');
         if ( ak.form.first_name ) required.push('first_name');
-        if ( ak.form.first_name ) required.push('last_name');
-        if ( ak.form.first_name ) required.push('zip');
+        if ( ak.form.last_name ) required.push('last_name');
+        if ( ak.form.zip ) required.push('zip');
         if ( ak.form.country ) required.push('country');
     }
 
