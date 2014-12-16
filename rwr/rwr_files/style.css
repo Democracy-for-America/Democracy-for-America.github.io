@@ -1,0 +1,2423 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition-duration: 1s;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+.box {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.box p {
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+footer {
+    width: 100%;
+    background: #003867;
+    margin-top: 40px;
+    padding: 20px 0 40px;
+}
+
+footer ul {
+    padding-bottom: 30px;
+}
+
+footer ul.social_media_links li {
+    margin-bottom: 12px;
+}
+
+footer ul li a:link,footer ul li a:visited {
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+footer ul.social_media_links {
+    display: inline;
+}
+
+footer ul.social_media_links li a,footer ul.social_media_links li a:link,footer ul.social_media_links li a:visited {
+    background-size: 22px;
+    width: 80px;
+    height: 32px;
+    display: block;
+    text-indent: 32px;
+    line-height: 20px;
+}
+
+footer ul div.first {
+    font-weight: 700;
+}
+
+footer .fineprint {
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+footer .fineprint {
+    padding-bottom: 30px;
+    background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/moveon-logo1.svg) no-repeat left bottom;
+    background-size: 115px;
+    clear: both;
+}
+
+footer .fineprint span {
+    display: inline-block;
+    border: 1px solid #656C9B;
+    padding: 8px 8px;
+}
+
+footer .fineprint a:link,footer .fineprint a:visited {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer .jumbotron-moveon {
+    margin-left: 0;
+    background-size: 160px;
+}
+
+footer ul li a:hover {
+    color: #2aa9e0;
+}
+
+.box-wide {
+    margin: 2em;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    letter-spacing: normal;
+}
+
+h2.page-heading {
+    font-weight: 800;
+    font-size: 2.5em;
+    text-transform: none;
+}
+
+h2.blog-title {
+    text-transform: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+.content h3 {
+    color: #003867;
+    text-transform: none;
+    font-size: 1em;
+}
+
+p.topquote {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    float: right;
+    font-family: 'Crimson Text',serif;
+    color: #fff;
+}
+
+p.disclaimer {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+p.disclaimer a {
+    text-decoration: underline;
+    color: white;
+}
+
+a.share-facebook,a.share-twitter {
+    background: #3b5998;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+
+a.share-twitter {
+    background: #4099FF;
+}
+
+textarea.share-text {
+    width: 100%;
+    height: 200px;
+    padding: 10px 20px;
+}
+
+p.email {
+    color: white;
+    margin-top: 10px;
+    background: rgba(199,6,0,0.84);
+    margin-bottom: 0;
+    padding: 0px 20px;
+}
+
+h2.t-action {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #D82428;
+}
+
+p.t-action {
+    font-size: 26px;
+    line-height: 34px;
+    color: #193C67;
+}
+
+.subpage h1 {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 38px;
+    color: #193C67;
+    border-bottom: 10px solid #193C67;
+    padding: 20px 0;
+}
+
+.subpage h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
+    color: #D82428;
+    margin: 0;
+}
+
+.subpage h3 {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.subpage .typeA {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 28px 0;
+    color: #193C67;
+}
+
+.subpage .typeB {
+    font-size: 20px;
+    line-height: 28px;
+    color: #193C67;
+}
+
+.subpage .widget-share .button {
+    font-size: 20px;
+    line-height: 60px;
+    height: 60px;
+    width: 300px;
+}
+
+.subpage p.disclaimer,.subpage p.disclaimer a {
+    color: #4d4d4d;
+}
+
+.typeA {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 28px 0;
+}
+
+.typeB {
+    font-size: 22px;
+    line-height: 28px;
+    color: #193C67;
+    text-transform: none;
+}
+
+.typeC {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 28px;
+}
+
+.typeD {
+    font-weight: 900;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #193C67;
+}
+
+.typographyA .box-group {
+    padding-top: 28px;
+}
+
+.typographyA h1 {
+}
+
+.typographyA h2 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: none;
+    color: #193C67;
+    width: 90%;
+}
+
+.typographyA h3 {
+    color: #193C67;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.typographyA p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 28px;
+}
+
+.typographyA a {
+    text-decoration: underline;
+}
+
+.typographyA img {
+    margin-bottom: 8px;
+}
+
+.typographyA .bigp {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 0 0 28px 0;
+}
+
+.typographyA blockquote {
+    font-weight: 200;
+    font-size: 28px;
+    padding-bottom: 28px;
+    color: #888;
+    padding: 0 0 0 20px;
+}
+
+.typographyA blockquote:first-letter {
+    margin-left: -12px;
+}
+
+.typographyA blockquote .byline {
+    display: block;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 28px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.typographyA .attribution,.typographyA .attribution a {
+    font-size: 10px;
+    line-height: 10px;
+    color: #aaa;
+    text-align: right;
+    text-decoration: none;
+}
+
+.buttonA {
+    font-size: 20px;
+    line-height: 60px;
+    height: 60px;
+    width: 300px;
+}
+
+.border-bottom-blue {
+    border-bottom: 10px solid #193C67;
+}
+
+.rwr-blue-bg {
+    background: #193C67;
+}
+
+.rwr-red-bg {
+    background: #C22326;
+}
+
+a.button {
+    padding: 0 20px;
+    text-align: center;
+}
+
+a.button:hover {
+    top: 2px;
+    left: 2px;
+    position: relative;
+}
+
+ul.nav li a.button {
+    position: relative;
+    top: 2px;
+}
+
+a.share-facebook {
+    font-size: 20px;
+    background: #3B5998 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-facebook1.svg) no-repeat 38px 16px;
+}
+
+a.share-twitter {
+    font-size: 20px;
+    background: #4099FF url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-twitter1.svg) no-repeat 32px 18px;
+}
+
+a.share-email {
+    font-size: 20px;
+    background: #F58E56 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-email1.svg) no-repeat 27px 21px;
+    text-align: center;
+    border: none;
+}
+
+.b-volunteer {
+    font-size: 20px;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background:;
+}
+
+.b-sharestory {
+    font-size: 20px;
+    width: auto;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 60px;
+    background: #D82428 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-speechbubble1.svg) no-repeat 36px 17px;
+}
+
+div.subscribe:before {
+    top: 13px;
+}
+
+.widget-signup {
+    width: 300px;
+    padding: 5px 0 0;
+    overflow: hidden;
+}
+
+.widget-signup input#email {
+    width: 200px;
+    float: none;
+}
+
+.widget-signup button#signup {
+    float: none;
+}
+
+.widget-signup input#email,.widget-signup input#name,.widget-signup input#zip {
+    padding: 8px;
+    font-size: 20px;
+    height: auto;
+}
+
+.widget-signup input#email {
+    width: 50%;
+}
+
+.widget-signup input#name {
+    width: 100%;
+}
+
+.widget-signup input#zip {
+    width: 45%;
+}
+
+.widget-signup button#signup {
+    display: block;
+    background: #003867;
+    height: auto;
+    font-size: 1em;
+    padding: 8px 20px;
+}
+
+div.widget-signup {
+    display: block!important;
+}
+
+input[type="text"] {
+    height: auto;
+}
+
+.widget-signup input#email,.widget-signup input#name,.widget-signup input#zip {
+    font-size: 14px;
+    padding: 8px;
+}
+
+.widget-signup button#signup {
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.widget-signup-is-infocus .jumbotron div.widget-signup,.widget-signup-is-infocus #page1_2 div.widget-signup {
+    width: 300px;
+}
+
+.widget-signup-is-infocus .jumbotron .widget-signup input#email,.widget-signup-is-infocus #page1_2 .widget-signup input#email {
+    width: 100%;
+}
+
+.widget-signup-is-infocus button#signup {
+    float: none;
+    clear: both;
+    z-index: 999;
+}
+
+.widget-signup-is-infocus div.full {
+    clear: both;
+    position: relative;
+    top: -40px;
+}
+
+.widget-signup-is-infocus a#signup,.widget-signup-is-infocus .jumbotron button#signup,.widget-signup-is-infocus #page1_2 button#signup {
+    position: relative;
+    float: right;
+    top: 48px;
+    right: 2px;
+    z-index: 20;
+}
+
+.widget-signup-is-infocus .disclaimer {
+    position: relative;
+    top: -40px;
+}
+
+.share-area {
+    overflow: hidden;
+}
+
+.share-area .icon-twitter-default {
+    width: 25px;
+}
+
+.share-box-fbtwitter {
+}
+
+.share-box-email {
+}
+
+.share-email {
+    border-right: none;
+}
+
+.share-area-typeA {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+}
+
+.jumbotron .share-area-typeA {
+    color: #fff;
+    display: none;
+}
+
+.jumbotron .jumbotron-share-area h2 {
+    font-family: 'Source Sans Pro',sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none;
+    margin: 0 10px;
+}
+
+.jumbotron .lanky-header {
+    line-height: 10px;
+    text-indent: -999em;
+}
+
+.jumbotron .share-area {
+    width: 190px;
+    padding: 0 1px 1px;
+}
+
+.jumbotron .icon-fb-default {
+    display: none;
+}
+
+.jumbotron .icon-twitter-default {
+    display: none;
+}
+
+.jumbotron .icon-join-default {
+    display: none;
+}
+
+.jumbotron .share-email textarea {
+    display: none;
+}
+
+.jumbotron .share-email .disclaimer {
+    display: none;
+}
+
+.jumbotron .share-box-fbtwitter {
+    float: none;
+    margin-left: 10px;
+}
+
+.jumbotron .share-box-email {
+    float: none;
+    margin-left: 10px;
+}
+
+.jumbotron button.xl300,.jumbotron a.xl300 {
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+}
+
+.jumbotron .align-center {
+    text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+    .jumbotron .jumbotron-share-area h2 {
+        font-size: 20px;
+        line-height: 22px;
+        margin: 0 0 0 40px;
+        width: 300px;
+    }
+
+    .jumbotron .share-area {
+        margin: 0px 0 0 20px;
+    }
+
+    .share-box-fbtwitter {
+        float: right;
+    }
+
+    .share-box-email {
+        width: 400px;
+        margin-left: 0px;
+    }
+
+    .jumbotron .share-area {
+        width: 400px;
+    }
+
+    .jumbotron button.xl300,.jumbotron a.xl300 {
+        font-size: 22px;
+        height: 60px;
+        line-height: 60px;
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 940px) {
+    .share-box-fbtwitter {
+        margin-right: 80px;
+    }
+
+    .share-box-email {
+        width: 450px;
+        margin-left: 60px;
+    }
+
+    .share-email {
+        border-right: 1px solid #E6E6E6;
+    }
+
+    .jumbotron .share-box-fbtwitter {
+        margin-right: 0;
+    }
+
+    .jumbotron .share-box-email {
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .jumbotron .share-area-typeA {
+        display: block;
+    }
+
+    .jumbotron .jumbotron-share-area h2 {
+        font-size: 26px;
+        line-height: 30px;
+        margin: 0 0 0 40px;
+        width: 800px;
+        padding-bottom: 10px;
+    }
+
+    .jumbotron .jumbotron-share-area h2 span:nth-child(2) {
+        display: inline-block;
+    }
+
+    .jumbotron .lanky-header {
+        font-weight: 200;
+        font-size: 22px;
+        line-height: 40px;
+        text-indent: 0px;
+        color: #fff;
+    }
+
+    .jumbotron .share-area {
+        width: 740px;
+    }
+
+    .jumbotron .share-email textarea {
+        display: block;
+    }
+
+    .jumbotron .share-email .disclaimer {
+        display: block;
+        color: #fff;
+    }
+
+    .jumbotron .share-box-fbtwitter {
+        float: right;
+        width: 320px;
+        margin-right: 0;
+    }
+
+    .jumbotron .share-box-email {
+        width: 400px;
+        margin-left: 0;
+    }
+
+    .jumbotron .icon-fb-default {
+        display: inline-block;
+    }
+
+    .jumbotron .icon-twitter-default {
+        display: inline-block;
+    }
+
+    .jumbotron .icon-join-default {
+        display: inline-block;
+    }
+
+    .jumbotron .align-center {
+        text-align: center;
+    }
+}
+
+.facebook-count-box {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #3B5998;
+    text-transform: uppercase;
+}
+
+.twitter-count-box {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #4099FF;
+    text-transform: uppercase;
+}
+
+.jumbotron .facebook-count-box,.jumbotron .twitter-count-box {
+    display: none;
+}
+
+.amount-button {
+    width: 68px;
+    height: 50px;
+    margin: 0 3px 5px 0;
+    font-size: 20px;
+}
+
+.amount-button:hover {
+    background-color: rgb(16,144,244);
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.8)!important;
+}
+
+#already-signed-donate {
+    display: none;
+}
+
+.jumbotron .widget-donate {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.jumbotron .widget-donate h2 {
+    font-family: 'Source Sans Pro',sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none;
+}
+
+.section-2ndask h2 {
+    line-height: 20px;
+}
+
+.navbar {
+    background: #fff;
+}
+
+.navbar-header {
+    overflow: auto;
+}
+
+.navbar-default {
+    z-index: 99999;
+}
+
+.home .navbar-default {
+    display: none;
+}
+
+.navbar-brand {
+    padding: 10px 0!important;
+}
+
+ul.nav li a {
+    font-size: .8em;
+    color: #193C67;
+}
+
+.navbar .nav>li>a {
+    text-shadow: none;
+}
+
+ul.nav li.navbar-button-donate a {
+    font-size: 14px;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    text-shadow: none;
+}
+
+ul.nav li.navbar-button-donate a:hover,ul.nav li.navbar-button-donate a:focus,ul.nav li.navbar-button-donate a:active {
+    background: #C22326;
+}
+
+.logo-main {
+    width: 240px;
+    height: 20px;
+    float: left;
+    margin: 10px 0 10px 0;
+}
+
+.logo-main a {
+    display: block;
+    text-indent: -999em;
+    width: 240px;
+    height: 26px;
+    background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/logo-rwr2a.svg) no-repeat;
+    background-size: 100%;
+}
+
+.mobile-icon {
+    margin: 0 15px;
+    position;fixed;
+}
+
+.visible-phone.mobile-menu {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.mobile-menu-bg {
+    -webkit-box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.mobile-menu ul {
+    display: none;
+    list-style: none;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    left: 0;
+    top: 0px;
+    background: white;
+    position: fixed;
+}
+
+.mobile-menu ul li {
+    width: 100%;
+    border-bottom: 1px solid #003867;
+    line-height: 30px;
+}
+
+.mobile-menu ul li:first-child {
+    padding: 20px;
+}
+
+.mobile-menu ul li a {
+    width: 100%;
+    color: #003867;
+    font-size: 24px;
+    padding: 20px;
+    font-weight: 400;
+    display: block;
+}
+
+.mobile-menu ul li a:hover {
+    background: #003867;
+    color: white;
+}
+
+.mobile-menu .bottom-anchor {
+    padding: 10px 20px;
+    bottom: 0;
+    position: absolute;
+    color: #003867;
+}
+
+a.mobile-icon {
+    position: fixed;
+    right: 0;
+    top: 10px;
+}
+
+.mobile-menu .logo-slideout a {
+    display: block;
+    text-indent: -999em;
+    width: 200px;
+    height: 20px;
+    padding: 0;
+    margin: 7px 0 0 0;
+    background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/logo-rwr2a.svg) no-repeat;
+    background-size: 100%;
+}
+
+.mobile-menu .logo-slideout a:hover {
+    background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/logo-rwr2a.svg) no-repeat;
+    background-size: 100%;
+}
+
+.toggleSlide {
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+    display: block;
+}
+
+.centered {
+    display: block;
+    margin: 0 auto;
+}
+
+#page2,#page2_2 {
+    display: none;
+}
+
+.container.overlap {
+    position: relative;
+    top: -250px;
+}
+
+.container.overlap-top {
+    position: relative;
+    top: -600px;
+    margin: 0 auto;
+}
+
+.banner {
+    position: relative;
+    overflow: auto;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.banner li {
+    list-style: none;
+}
+
+.banner ul li {
+    float: left;
+}
+
+.banner ul {
+    margin: 0;
+}
+
+nav {
+    display: block;
+    background: black;
+    padding: 10px;
+}
+
+.navbar-fixed-top {
+    border-bottom: 1px solid #ccc;
+}
+
+.section.dark {
+    background: #000;
+}
+
+nav {
+    display: block;
+    background: #fff;
+}
+
+.navbar-fixed-top,.navbar-fixed-bottom,.navbar-static-top {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#petition-error {
+    color: white;
+}
+
+.donate-button-desktop {
+    margin: 4px 0px 0px 20px;
+}
+
+.donate-button-desktop:active {
+    background-color: rgb(194,35,38 !important);
+}
+
+.subpage .navbar-fixed-top {
+    position: relative;
+}
+
+.nav-parent {
+    position: relative;
+    z-index: 99999;
+}
+
+.widget-blog article {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    clear: both;
+    float: none;
+}
+
+.widget-blog .article-image {
+}
+
+.widget-blog .article-entry {
+}
+
+.widget-blog .article-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: none;
+    margin: 0 0 10px 0;
+}
+
+.widget-blog .article-title a:hover {
+    color: #D82428;
+}
+
+.widget-blog .article-entry p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000;
+    margin: 0;
+    display: none;
+}
+
+.widget-blog .article-more {
+    display: none;
+}
+
+.widget-blog .article-more a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: underline;
+}
+
+.widget-blog .article-more a:hover {
+    color: #D82428;
+    text-decoration: none;
+}
+
+.icon-fb,.icon-twitter {
+    width: auto!important;
+    margin: 0;
+    position: relative;
+    top: 5px;
+}
+
+.icon-twitter {
+    position: relative;
+    top: 9px;
+}
+
+.not-bob a {
+    color: rgb(0,192,255);
+    font-weight: bold;
+}
+
+hr {
+    border-bottom: 14px solid #003867;
+    margin: 0;
+}
+
+.section {
+    clear: both;
+}
+
+.jumbotron {
+    height: 400px;
+    background: #1C3C66 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/ewarren_big-2d.jpg) no-repeat right top;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 10px 0 0;
+    position: relative;
+}
+
+.jumbotron-box {
+    margin: 0px 10px;
+}
+
+.jumbotron h1 {
+    width: 200px;
+}
+
+.jumbotron h1 {
+    font-size: 32px;
+    line-height: 30px;
+    font-family: 'chunkfiveroman',helvetica,arial;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.6);
+}
+
+.jumbotron h1.sub {
+    font-size: 32px;
+    line-height: 30px;
+}
+
+.jumbotron h2 {
+    font-family: 'chunkfiveroman',helvetica,arial;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.6);
+}
+
+.jumbotron-moveon-position {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.jumbotron-moveon {
+    margin: 0 0 0 10px;
+    background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/moveon-logo1.svg) no-repeat;
+    background-size: 115px;
+    text-indent: -999em;
+}
+
+.section-lizquote {
+    background: #193C67;
+    padding: 30px 20px 30px 20px;
+}
+
+.section-lizquote p {
+    color: #fff;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.section-lizquote .byline {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.section-lizquote .attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 20px;
+    text-shadow: none;
+    color: #666;
+    display: none;
+}
+
+.section-lizquote .firstquote {
+    margin-left: -12px;
+    color: #264266;
+}
+
+.section-lizquote .lastquote {
+    color: #264266;
+}
+
+.section-video {
+    background: #193C67;
+    padding: 10px 0 0px;
+}
+
+.section-video-box,.section-video-iframe {
+    width: 300px;
+    height: 200px;
+}
+
+.section-video-box {
+    margin: 0 auto;
+}
+
+.section-share-video {
+    text-align: center;
+    padding: 10px 0 10px 0px;
+}
+
+.section-share-video a {
+    font-size: 20px;
+    line-height: 60px;
+    height: 60px;
+    width: 300px;
+}
+
+.share-video-optionA {
+    display: block;
+}
+
+.share-video-optionB {
+    display: none;
+}
+
+.section-argument {
+    background: #193C67;
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.6);
+}
+
+.section-argument-box {
+    margin: 0 10px;
+    padding: 0 0 40px;
+}
+
+.section-argument-pullquote {
+    border-top: 4px solid #0D2038;
+    border-bottom: 4px solid #0D2038;
+    padding: 10px 0;
+}
+
+.section-argument-pullquote p {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.section-argument-bodycopy {
+    padding: 16px 0 0 0;
+}
+
+.section-argument-bodycopy p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+.section-argument-bodycopy a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.section-logo-break {
+    background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/logo-rwr2a.svg) no-repeat center center;
+    height: 90px;
+    background-size: 92%;
+    text-indent: -999em;
+}
+
+.section-share-box {
+    margin: 0 10px;
+    padding: 20px 0;
+}
+
+.widget-share-fb,.widget-share-twitter,.widget-share-email {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.section-share {
+    padding-bottom: 40px;
+}
+
+.section-share h2.t-action {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.section-share p.t-action {
+    margin-bottom: 30px;
+    display: none;
+}
+
+.section-share .button {
+    width: 300px;
+    line-height: 60px;
+    height: 60px;
+}
+
+.section-action p.t-action {
+    display: none;
+    margin-bottom: 30px;
+}
+
+.section-action .volunteer-box {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.section-action .chipin-box {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.section-action {
+    padding-bottom: 40px;
+}
+
+.section-membersay {
+    padding-bottom: 40px;
+}
+
+.section-membersay-box {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.section-membersay p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    color: #193C67;
+}
+
+.section-membersay .byline {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.section-membersay h3 {
+    text-transform: none;
+}
+
+.section-membersay-shareit {
+    text-align: center;
+}
+
+.section-membersay .button {
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.section-blog {
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.section-blog-box {
+    margin: 0 10px;
+}
+
+#home .widget-blog article:last-child {
+    border-bottom: none;
+}
+
+.section-blog-readmore .button {
+    background: #6182AB;
+}
+
+.section-2ndask-box {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.section-2ndask h2 {
+    text-align: center;
+    text-transform: none;
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.section-2ndask h2 span {
+    display: block;
+}
+
+.section-2ndask .button {
+    font-size: 20px;
+    line-height: 60px;
+    height: 60px;
+    width: 300px;
+    text-decoration: none;
+}
+
+.section-2ndask .widget-signup {
+    margin: 0 auto;
+}
+
+.section-2ndask .disclaimer {
+    text-align: center;
+    color: #193C67;
+}
+
+.section-2ndask .disclaimer a {
+    color: #193C67;
+}
+
+.jumbotron .already-signed-donate-button-box {
+    width: 200px;
+}
+
+.subpage .container {
+    padding: 0 10px;
+}
+
+.subpage nav .container {
+    padding: 0;
+}
+
+.takeaction-volunteer input {
+    width: 100%;
+}
+
+.takeaction-volunteer label {
+    display: block;
+}
+
+.takeaction-volunteer input#zip {
+    width: 50%;
+}
+
+.takeaction-box1 {
+    border-top: 1px solid #ddd;
+}
+
+.takeaction-sharestory {
+    padding-bottom: 20px;
+}
+
+.takeaction-joinchapter {
+    border-top: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.takeaction-host {
+    border-top: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.takeaction-share {
+    border-top: 1px solid #ddd;
+}
+
+.whywarren-box2 p:first-child {
+    height: 190px;
+}
+
+.whywarren-extra {
+    padding-bottom: 28px;
+}
+
+.whywarren-talktalk {
+    padding-bottom: 28px;
+}
+
+.whywarren-talktalk-stars {
+    background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-star2.svg) repeat-x;
+    height: 28px;
+}
+
+.whywarren-talktalk .slide-table {
+    display: table;
+}
+
+.whywarren-talktalk .slide-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.whywarren-talktalk p {
+    font-weight: 100;
+    font-size: 28px;
+    color: #193C67;
+    margin: 0;
+}
+
+.whywarren-talktalk .byline {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.whywarren-videoframe {
+    width: 300px;
+    height: 200px;
+}
+
+.blogpage-header {
+    position: relative;
+}
+
+.blogpage-signup-wrapper {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    padding: 0 10px;
+}
+
+.widget-signup-is-infocus .blogpage-signup-wrapper {
+    background: #eee;
+}
+
+.blogpage-header #page2 {
+    padding-top: 10px;
+}
+
+.page-shareyourstory input#name {
+    width: 100%;
+}
+
+.page-shareyourstory input#email {
+    width: 100%;
+}
+
+.page-shareyourstory input#zip {
+    width: 50%;
+}
+
+.page-shareyourstory input#phone {
+    width: 50%;
+}
+
+input:focus:invalid,textarea:focus:invalid,select:focus:invalid {
+    color: rgb(85,85,85);
+    border-color: rgb(85,85,85);
+}
+
+input:focus:invalid:focus,textarea:focus:invalid:focus,select:focus:invalid:focus {
+    border-color: rgb(85,85,85);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
+}
+
+.jumbotron h2 span.counter,.jumbotron h2 span.zahl {
+    display: inline;
+}
+
+@media only screen and (min-width: 640px) {
+    .page-plantowin h2 {
+        clear: both;
+    }
+
+    .typographyA .box-group {
+        overflow: hidden;
+        clear: both;
+    }
+
+    .typographyA .box-left {
+        width: 47%;
+        float: left;
+    }
+
+    .typographyA .box-right {
+        width: 45%;
+        float: right;
+    }
+}
+
+@media (min-width: 699px) {
+    .box {
+        width: 680px;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .jumbotron-box {
+        margin: 10px 0 0 20px;
+    }
+
+    .jumbotron-moveon {
+        margin: 0 0 0 20px;
+    }
+
+    .jumbotron {
+        height: 500px;
+    }
+
+    .jumbotron h1 {
+        width: 100%;
+    }
+
+    .widget-signup {
+        width: 380px;
+    }
+
+    .widget-signup input#email {
+        width: 235px;
+        float: left;
+    }
+
+    .widget-signup button#signup {
+        float: right;
+    }
+
+    .widget-signup-is-infocus .widget-signup button#signup {
+        top: 48px;
+        right: 2px;
+    }
+
+    .jumbotron .widget-share {
+        margin: 10px 0 0 20px;
+    }
+
+    .section-argument-box {
+        margin: 0 60px;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .jumbotron {
+        height: 450px;
+        background: #1C3C66 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/ewarren_big-2c.jpg) no-repeat right top;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .jumbotron h1 {
+        font-size: 36px;
+        line-height: 30px;
+        width: 100%;
+    }
+
+    .jumbotron h1.sub {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .widget-signup-is-infocus .widget-signup input#email {
+        width: 100%;
+    }
+
+    .widget-signup-is-infocus div.widget-signup {
+        width: 380px;
+    }
+
+    .jumbotron .widget-donate {
+        margin: 20px 0 0 20px;
+    }
+
+    .section-lizquote {
+        height: 450px;
+        background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/ap991856067745-5b.jpg) no-repeat center center;
+        background-size: cover;
+        padding: 0;
+    }
+
+    .section-lizquote-box {
+        width: 50%;
+        height: 450px;
+        float: right;
+        position: relative;
+    }
+
+    .section-lizquote-contrast {
+        width: 100%;
+        height: 100%;
+        background: #0D2038;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .section-lizquote-copy {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .section-lizquote p {
+        color: #fff;
+        width: 320px;
+        font-size: 28px;
+        line-height: 36px;
+        margin: 30px 0 0 20px;
+    }
+
+    .section-lizquote .attribution {
+        display: block;
+    }
+
+    .section-video {
+        padding: 30px 0 0px;
+    }
+
+    .section-video-box,.section-video-iframe {
+        width: 600px;
+        height: 400px;
+    }
+
+    .section-video-box {
+        margin: 0 auto;
+    }
+
+    .section-2ndask {
+        padding-bottom: 40px;
+    }
+
+    .section-2ndask h2 {
+        font-size: 26px;
+    }
+
+    .section-2ndask h2 span {
+        display: inline;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .widget-blog {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .widget-blog article {
+        width: 700px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        clear: both;
+        overflow: hidden;
+    }
+
+    .widget-blog .article-image {
+        width: 280px;
+        float: left;
+    }
+
+    .widget-blog .article-entry {
+        width: 400px;
+        float: right;
+    }
+
+    .widget-blog .article-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .widget-blog .article-title a {
+    }
+
+    .widget-blog .article-entry p {
+        font-size: 16px;
+        line-height: 22px;
+        display: block;
+    }
+
+    .widget-blog .article-more {
+        display: block;
+    }
+
+    .widget-blog .article-more a {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    footer .container {
+        width: 750px;
+    }
+
+    footer ul {
+        float: left;
+        padding-right: 60px;
+    }
+
+    footer ul li a:link,footer ul li a:visited {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .jumbotron-box {
+        margin: 60px 0 0 20px;
+    }
+
+    .jumbotron .widget-share {
+        width: 610px;
+        margin: 40px 0 0 20px;
+    }
+
+    .jumbotron h2 span {
+        display: block;
+    }
+
+    .jumbotron .widget-share .button {
+        font-size: 20px;
+        width: 300px;
+        margin: 0 0 10px;
+        line-height: 40px;
+        height: 40px;
+    }
+
+    .jumbotron .already-signed-donate-button-box {
+        width: 100%;
+    }
+
+    .jumbotron .widget-share-fb {
+        float: left;
+    }
+
+    .jumbotron .widget-share-twitter {
+        float: right;
+    }
+
+    .jumbotron .widget-share-email {
+        clear: both;
+    }
+
+    .jumbotron a.share-facebook {
+        background: #3B5998 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-facebook1.svg) no-repeat 38px 8px;
+    }
+
+    .jumbotron a.share-twitter {
+        background: #4099FF url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-twitter1.svg) no-repeat 36px 9px;
+    }
+
+    .jumbotron a.share-email {
+        background: #F58E56 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-email1.svg) no-repeat 29px 11px;
+        text-align: center;
+    }
+
+    .jumbotron .widget-donate {
+        width: 400px;
+        margin: 60px 0 0 40px;
+    }
+
+    .jumbotron .widget-donate h2 {
+        font-size: 20px;
+        line-height: 22px;
+        width: 300px;
+    }
+
+    .jumbotron .already-signed-donate-button-box {
+        width: 360px;
+    }
+
+    #page2_2 .t-action span {
+        display: block;
+    }
+
+    #page2_2 .widget-share {
+        width: 610px;
+        margin: 0 auto;
+    }
+
+    #page2_2 .widget-share-email {
+        text-align: left;
+        clear: both;
+        background: #E6E6E6;
+    }
+
+    #page2_2 .widget-share a.button {
+        font-size: 20px;
+        width: 300px;
+        margin: 0 0 10px;
+        line-height: 40px;
+        height: 40px;
+    }
+
+    #page2_2 a.share-facebook {
+        background: #3B5998 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-facebook1.svg) no-repeat 38px 8px;
+    }
+
+    #page2_2 a.share-twitter {
+        background: #4099FF url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-twitter1.svg) no-repeat 36px 9px;
+    }
+
+    #page2_2 a.share-email {
+        background: #F58E56 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-email1.svg) no-repeat 29px 11px;
+        text-align: center;
+    }
+
+    .section-2ndask .widget-donate {
+        width: 360px;
+        margin: 0 auto;
+    }
+
+    .widget-share-email {
+        background: rgb(0,0,0);
+        background: rgba(255,255,255,0.3);
+        padding: 20px;
+    }
+
+    .widget-share-email-copypaste {
+        display: block;
+    }
+
+    .section-share .widget-share-email textarea {
+        width: 640px;
+        height: 200px;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0 0 0 10px;
+    }
+
+    .widget-share-fb {
+        width: 50%;
+        float: left;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .widget-share-twitter {
+        width: 50%;
+        float: right;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .widget-share-email {
+        width: 100%;
+    }
+
+    .section-share h2.t-action {
+        display: none;
+    }
+
+    .section-share p.t-action {
+        display: block;
+        width: 760px;
+        margin: 0 auto 30px;
+    }
+
+    .section-share-box {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .section-share .widget-share-email {
+        background: #E6E6E6;
+        clear: both;
+    }
+
+    .section-share .widget-share-email .button {
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section-action-box {
+        width: 750px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 40px 0;
+    }
+
+    .section-action p.t-action {
+        display: block;
+    }
+
+    .section-action .volunteer-box {
+        margin: 0 0 0 30px;
+        float: left;
+    }
+
+    .section-action .chipin-box {
+        margin: 0 30px 0 0;
+        float: right;
+    }
+
+    .section-membersay h2.t-action {
+        text-align: center;
+    }
+
+    .section-membersay-box {
+        width: 700px;
+        padding: 40px 0;
+    }
+
+    .section-membersay-stars {
+        height: 40px;
+        background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-star3.svg) repeat-x left center;
+    }
+
+    .section-membersay-stars.box-bottom {
+        margin-top: 20px;
+    }
+
+    .section-membersay p {
+        font-weight: 100;
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .section-membersay .byline {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .section-blog-box {
+        width: 700px;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+
+    .section-2ndask-box {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .subpage .container {
+        width: 750px;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .subpage .widget-share-email {
+        background: #E6E6E6;
+        clear: both;
+    }
+
+    .subpage .widget-share-email .button {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .page-blog .widget-blog {
+        width: 100%;
+    }
+
+    .blogpage-signup-wrapper {
+        display: block;
+    }
+
+    .page-blog .widget-signup {
+        width: 400px;
+    }
+
+    footer ul.social_media_links li {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 940px) {
+    ul.logo {
+        width: 480px;
+    }
+
+    .navbar .navbar-nav-items {
+        float: right;
+    }
+
+    .widget-blog {
+        width: 940px;
+    }
+
+    .widget-blog article {
+        width: 940px;
+    }
+
+    .widget-blog .article-image {
+        width: 300px;
+    }
+
+    .widget-blog .article-entry {
+        width: 620px;
+    }
+
+    footer .container {
+        width: 940px;
+    }
+
+    .jumbotron {
+        height: 600px;
+        background: #1C3C66 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/ewarren_big-2b.jpg) no-repeat right top;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .jumbotron-box {
+        margin: 80px 0 0 40px;
+    }
+
+    .jumbotron-moveon {
+        margin: 0 0 0 40px;
+    }
+
+    .jumbotron h1 {
+        font-size: 40px;
+        line-height: 36px;
+    }
+
+    .jumbotron h1.sub {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    div.widget-signup {
+        width: 380px;
+    }
+
+    .widget-signup-is-infocus .widget-signup input#email {
+        width: 100%;
+    }
+
+    .widget-signup-is-infocus div.widget-signup {
+        width: 380px;
+    }
+
+    .section-lizquote {
+        height: 600px;
+    }
+
+    .section-lizquote-box {
+        height: 600px;
+    }
+
+    .section-lizquote p {
+        width: 420px;
+        font-size: 42px;
+        line-height: 48px;
+        margin: 60px 0 0 30px;
+    }
+
+    .section-video {
+        padding: 40px 0 0px;
+    }
+
+    .section-video-box,.section-video-iframe {
+        width: 940px;
+        height: 626px;
+    }
+
+    .section-video-box {
+        margin: 0 auto;
+    }
+
+    .section-argument {
+        padding: 20px 0 40px;
+    }
+
+    .section-argument-box {
+        width: 940px;
+        margin: 0 auto;
+    }
+
+    .section-argument-stars {
+        display: block;
+        width: 940px;
+        height: 50px;
+        background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/g-star1.svg) repeat-x left center;
+    }
+
+    .section-argument-copy {
+        overflow: hidden;
+    }
+
+    .section-argument-pullquote {
+        border: none;
+        width: 450px;
+        float: left;
+        padding: 0;
+    }
+
+    .section-argument-pullquote p {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 80px;
+    }
+
+    .section-argument-bodycopy {
+        width: 450px;
+        float: right;
+    }
+
+    .section-logo-break {
+        height: 180px;
+        background-size: auto;
+    }
+
+    .section-share-box {
+        width: 940px;
+    }
+
+    .section-share .widget-share-email .button {
+        margin-left: 65px;
+    }
+
+    .section-share .widget-share-email textarea {
+        width: 770px;
+        height: 200px;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0 0 0 65px;
+    }
+
+    .section-action-box {
+        width: 940px;
+    }
+
+    .section-action .volunteer-box {
+        width: 450px;
+        margin: 0;
+    }
+
+    .section-action .chipin-box {
+        width: 450px;
+        margin: 0;
+    }
+
+    .section-action .chipin-box .amount-button {
+        width: 99px;
+    }
+
+    .section-blog-box {
+        width: 940px;
+    }
+
+    .section-2ndask-box {
+        width: 940px;
+    }
+
+    .subpage .container {
+        width: 940px;
+    }
+
+    .subpage .widget-share-email .button {
+        margin-left: 65px;
+    }
+
+    .subpage .widget-share-email textarea {
+        width: 770px;
+        height: 200px;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0 0 0 65px;
+    }
+
+    .takeaction-volunteer form {
+        width: 450px;
+    }
+
+    .takeaction-box1 {
+        overflow: hidden;
+        padding: 20px 0;
+    }
+
+    .takeaction-box1 p.t-action {
+        font-size: 20px;
+        line-height: 36px;
+    }
+
+    .page-takeaction .takeaction-box1 .button {
+        width: 280px;
+        line-height: 40px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .takeaction-sharestory {
+        width: 280px;
+        float: left;
+        margin-right: 45px;
+        border: none;
+    }
+
+    .takeaction-joinchapter {
+        width: 280px;
+        float: left;
+        margin-right: 45px;
+        border: none;
+    }
+
+    .takeaction-host {
+        width: 280px;
+        float: left;
+        border: none;
+    }
+
+    .whywarren-box1 {
+        width: 450px;
+        float: left;
+    }
+
+    .whywarren-box2 {
+        width: 450px;
+        float: right;
+    }
+
+    .whywarren-videoframe {
+        width: 450px;
+        height: 280px;
+    }
+
+    .page-shareyourstory .col-left {
+        width: 450px;
+        float: left;
+        padding-top: 20px;
+    }
+
+    .page-shareyourstory .col-right {
+        width: 450px;
+        float: right;
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .jumbotron {
+        height: 700px;
+    }
+
+    .jumbotron h1 {
+        font-size: 100px;
+        line-height: 84px;
+        width: 650px;
+        margin-top: 5px;
+    }
+
+    .jumbotron h1.sub {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 499px) {
+    footer {
+        position: absolute;
+    }
+
+    footer ul div.third {
+        font-size: .8em;
+    }
+
+    #rwr_logo {
+        width: 180px;
+        height: 120px;
+        background: url('images/runwarrenrun.svg') no-repeat;
+        position: fixed;
+        bottom: 130px;
+    }
+
+    .box {
+        width: 82%;
+        margin: 5% 0 0 8%;
+    }
+}
+
+@media only screen and (max-device-width : 580px) {
+    #rwr_logo {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-default {
+        display: block!important;
+        position: relative;
+        margin: 0px;
+    }
+
+    .mobile-menu-toggle {
+        list-style: none;
+    }
+}
+
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    .subpage-container {
+        width: 720px!important;
+    }
+
+    .navbar .nav li a {
+        padding-right: 5px;
+    }
+
+    .jumbotron {
+        height: 480px;
+    }
+
+    footer .container {
+        width: 720px!important;
+    }
+}
+
+.lt-ie9 .container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.lt-ie9 .logo-main {
+    float: none;
+    height: 40px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.lt-ie9 .logo-main a {
+    background: url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/logo-rwr2-300w.png) no-repeat;
+    width: 100%;
+    height: 40px;
+}
+
+.lt-ie9 .navbar-nav-items {
+    float: none;
+}
+
+.lt-ie9 .navbar-nav-items li {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lt-ie9 .donate-button-desktop {
+    margin: 0;
+}
+
+.lt-ie9 .jumbotron {
+    height: 600px;
+    background: #1C3C66 url(http://d1zq5jj7mpgjcf.cloudfront.net/rwr/ewarren_big-2b.jpg) no-repeat right top;
+    background-size: 50%;
+}
+
+.lt-ie9 .section-video-box,.lt-ie9 .section-video-iframe {
+    width: 940px;
+    height: 626px;
+}
+
+.lt-ie9 .widget-signup .full {
+    display: block;
+    visibility: visible;
+    position: relative;
+    top: -48px;
+}
+
+.lt-ie9 .widget-signup #email {
+    width: 100%!important;
+}
+
+.lt-ie9 .widget-signup button {
+    position: relative;
+    top: 95px;
+}
