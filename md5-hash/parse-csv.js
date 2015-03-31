@@ -63,7 +63,7 @@ function hashEmailColumn( strData, emailColumn, letterCase, strDelimiter, quoted
       progress += 1;
 
       // Log progress every 1,000 completed rows
-      if (progress % 1000 === 0) { self.postMessage({'cmd': 'progress', 'msg': progress}) }
+      if (progress % 1000 === 0) { self.postMessage({'cmd': 'progress', 'msg': 'processing row ' + progress}) }
       
       row = [];
     }
@@ -89,7 +89,7 @@ function hashEmailColumn( strData, emailColumn, letterCase, strDelimiter, quoted
 
     // Now that we have our value string, let's add
     // it to the data array.
-    row.push( emailColumn === row.length ? md5(letterCase === 'upper' ? strMatchedValue.toUpperCase() : strMatchedValue.toLowerCase() ) : strMatchedValue );
+    row.push( emailColumn === row.length ? md5(letterCase === 'upper' ? strMatchedValue.trim().toUpperCase() : strMatchedValue.trim().toLowerCase() ) : strMatchedValue );
   }
 
   // Return the parsed data.
