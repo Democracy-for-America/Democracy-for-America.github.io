@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DFA's MD5-hashing utility</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h2>Democracy for America's MD5-hashing utility</h2>
+
+  <p>
+    This is an open-source JavaScript application that hashes email addresses contained in a CSV file using the MD5 algorithm. The process is handled by an HTML5 web worker, which enables the application to handle really large files (up to around 700 MB), without freezing or crashing.
+  </p>
+
+  <p>
+    Because the application is run entirely within your browser, no sensitive information will be sent from your computer to a server.
+  </p>
+
+  <p>
+    This application will accept CSV and TSV files. If no extension is provided, the file is assumed to be a CSV.
+  </p>
+
+  <fieldset>
+    <div class="form-inputs">
+      <label>Column to hash: </label>
+      <input type="text" id="column_to_hash" value="email" />
+    </div>
+
+    <div class="form-inputs">
+      <label>Convert email to: </label>
+      <select id="case">
+        <option value="upper">UPPER CASE</option>
+        <option value="lower">lower case</option>
+      </select>
+    </div>
+
+    <div class="form-inputs">
+      <label>Text delimiter: </label>
+      <select id="quoted_fields">
+        <option value="true">Quotation mark</option>
+        <option value="false">None</option>
+      </select>
+    </div>
+
+    <div class="form-inputs">
+      <label>Select a file to hash:</label><br />
+      <input type="file" id="fileinput" />
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div>Progress:</div>
+    <pre id="progress"></pre>
+
+    <div>Errors:</div>
+    <pre id="errors"></pre>
+  </fieldset>
+
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
