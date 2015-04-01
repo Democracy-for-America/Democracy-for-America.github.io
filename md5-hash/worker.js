@@ -5,7 +5,7 @@ self.addEventListener('message', function(e) {
 
   // If the file ends in '.tsv', use a tab character as the delimiter.
   // Otherwise, use a comma
-  var delimiter = filename.endsWith(".tsv") ? '\t' : ','
+  var delimiter = /\.tsv$/.test(filename) ? '\t' : ',';
 
   // Get the text of the csv, and standardize the line-breaks,
   // if a different encoding is used
@@ -20,7 +20,7 @@ self.addEventListener('message', function(e) {
   var quoted_fields = e.data.quoted_fields;
 
   // Determine which column number to hash
-  var email_column = headers.map(function(s){return s.replace('\"', '').trim();}).indexOf(column_to_hash);
+  var email_column = headers.map(function(s){return s.replace(/\"/g, '').trim();}).indexOf(column_to_hash);
 
   // Check for errors
   if (column_to_hash === "") { self.postMessage({'cmd': 'error', 'msg': '\"Column to hash\" is required!'}); return false; }
