@@ -1,9 +1,12 @@
+// Initialize the worker on page load, so that folks may disconnect their internet connection
+// while running the process.
+worker = new Worker('worker.js');
+
 document.getElementById('fileinput').addEventListener('change', function(e) {
 
   document.getElementById("progress").innerHTML = 'loading...';
 
-  // Initialize an HTML5 web worker and a FileReader
-  var worker = new Worker('worker.js');
+  // Initialize a FileReader
   var reader = new FileReader();
   var filename = this.files[0].name;
 
