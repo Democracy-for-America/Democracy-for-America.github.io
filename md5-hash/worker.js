@@ -11,6 +11,11 @@ self.addEventListener('message', function(e) {
   // if a different encoding is used
   var text = e.data.csv.replace(/(?:\r\n|\r)/g, '\n');
 
+  // Add an extra linebreak at the end of the file, if none exists
+  var append = /\n$/.test(text) ? '' : '\n';
+
+  console.log(append);
+
   // Create a header array
   var headers = text.substring(0, text.indexOf('\n')).split(delimiter);
 
@@ -27,7 +32,7 @@ self.addEventListener('message', function(e) {
   if (email_column === -1) { self.postMessage({'cmd': 'error', 'msg': 'Unable to find a column matching \"' + column_to_hash + '\"!'}); return false; }
 
   // Separate the remainder of the csv
-  var body = text.substring(text.indexOf('\n') + 1);
+  var body = text.substring(text.indexOf('\n') + 1) + append;
   
   // Hash the email column
   var hashed_body = hashEmailColumn(body, email_column, letter_case, delimiter, quoted_fields);
