@@ -13,16 +13,21 @@ document.getElementById('fileinput').addEventListener('change', function(e) {
   // Get various config options
   var case_select = document.getElementById('case');
   var letter_case = case_select.options[case_select.selectedIndex].value;
+  var delete_originals_select = document.getElementById('delete_originals');
+  var delete_originals = delete_originals_select.options[delete_originals_select.selectedIndex].value;
   var quoted_fields_select = document.getElementById('quoted_fields');
   var quoted_fields = quoted_fields_select.options[quoted_fields_select.selectedIndex].value;
   var column_to_hash = document.getElementById('column_to_hash').value.trim();
+  var salt = document.getElementById('salt').value;
 
   reader.onload = function() {
     worker.postMessage({
       'csv': reader.result,
       'filename': filename,
       'letter_case': letter_case,
+      'delete_originals': delete_originals,
       'column_to_hash': column_to_hash,
+      'salt': salt,
       'quoted_fields': quoted_fields
     });
 

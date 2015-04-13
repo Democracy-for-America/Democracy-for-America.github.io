@@ -22,6 +22,8 @@ self.addEventListener('message', function(e) {
   // Get various configuration options
   var letter_case = e.data.letter_case;
   var column_to_hash = e.data.column_to_hash;
+  var delete_originals = e.data.delete_originals;
+  var salt = e.data.salt;
   var quoted_fields = e.data.quoted_fields;
 
   // Determine which column number to hash
@@ -35,7 +37,11 @@ self.addEventListener('message', function(e) {
   var body = text.substring(text.indexOf('\n') + 1) + append;
   
   // Hash the email column
-  var hashed_body = hashEmailColumn(body, email_column, letter_case, delimiter, quoted_fields);
+  var hashed_body = hashEmailColumn(body, email_column, letter_case, delimiter, quoted_fields, salt, delete_originals);
+
+  if (delete_originals === 'no') {
+    headers.splice(email_column, 0, 'original');
+  }
 
   // Combine the headers, and csv with MD5-hashed email column
   var converted_csv = headers.join().replace(column_to_hash, 'hashed_' + column_to_hash) + '\n' + hashed_body;

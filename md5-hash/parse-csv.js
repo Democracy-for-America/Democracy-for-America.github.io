@@ -7,7 +7,7 @@
 // The default delimiter is the comma, but this
 // can be overriden in the second argument.
 
-function hashEmailColumn( strData, emailColumn, letterCase, strDelimiter, quotedFields ){
+function hashEmailColumn( strData, emailColumn, letterCase, strDelimiter, quotedFields, salt, deleteOriginals ){
   // Check to see if the delimiter is defined.
   // If not, then default to a comma.
   strDelimiter = (strDelimiter || ",");
@@ -89,7 +89,19 @@ function hashEmailColumn( strData, emailColumn, letterCase, strDelimiter, quoted
 
     // Now that we have our value string, let's add
     // it to the data array.
-    row.push( emailColumn === row.length ? md5(letterCase === 'upper' ? strMatchedValue.trim().toUpperCase() : strMatchedValue.trim().toLowerCase() ) : strMatchedValue );
+    if (emailColumn === row.length) {
+      if (deleteOriginals === 'no') {
+        // Save original email addresses, if desired
+        row.push(strMatchedValue);
+      }
+      // This is the column we want to hash --
+      // push the hashed value
+      row.push(md5( salt + letterCase === 'upper' ? strMatchedValue.trim().toUpperCase() : strMatchedValue.trim().toLowerCase() ));
+    } else {
+      // This isn't the column we want to hash --
+      // push the original value
+      row.push(strMatchedValue);
+    }
   }
 
   // Return the parsed data.
