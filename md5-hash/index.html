@@ -30,7 +30,7 @@
     Have direct access to your SQL database? Then you can manually export a hashed tsv, without using this tool. Simply run a command like:
   </p>
   <p>
-    <span class="code">mysql -u username -p'password' -h client-db.example.com database_name -e "SELECT MD5(UPPER(TRIM(email))) FROM users" > hashed_email_list.tsv</span>
+    <span class="code">mysql -u username -p'password' -h client-db.example.com database_name -e "SELECT MD5('salt' + UPPER(TRIM(email))) FROM users" > hashed_email_list.tsv</span>
   </p>
   <p>
     (The exact command may vary, depending on your database set up.)
@@ -49,7 +49,7 @@
   </p>
 
   <p>
-    We recommend using a <a href="http://en.wikipedia.org/wiki/Salt_%28cryptography%29" target="_blank">salt</a>, as an extra precaution against <a href="http://en.wikipedia.org/wiki/Rainbow_table" target="_blank">rainbow tables</a>.
+    We recommend using a <a href="http://en.wikipedia.org/wiki/Salt_%28cryptography%29" target="_blank">salt</a>, to help ensure your hashes are unique. This helps protect against <a href="http://en.wikipedia.org/wiki/Rainbow_table" target="_blank">rainbow tables</a>.
   </p>
 
   <h2>Settings</h2>
