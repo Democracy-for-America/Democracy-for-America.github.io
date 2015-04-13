@@ -96,7 +96,7 @@ function hashEmailColumn( strData, emailColumn, letterCase, strDelimiter, quoted
       }
       // This is the column we want to hash --
       // push the hashed value
-      row.push(md5( salt + letterCase === 'upper' ? strMatchedValue.trim().toUpperCase() : strMatchedValue.trim().toLowerCase() ));
+      row.push(md5( salt + (letterCase === 'upper' ? strMatchedValue.trim().toUpperCase() : strMatchedValue.trim().toLowerCase()) ));
     } else {
       // This isn't the column we want to hash --
       // push the original value
