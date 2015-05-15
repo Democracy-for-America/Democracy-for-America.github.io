@@ -2,13 +2,24 @@
 // while running the process.
 worker = new Worker('worker.js');
 
-document.getElementById('fileinput').addEventListener('change', function(e) {
+document.getElementById('file-form').addEventListener('submit', function() {
+
+  // Clear errors
+  document.getElementById("errors").innerHTML = "";
+
+  // Make sure a file is present
+  if (document.getElementById('fileinput').files.length == 0) {
+    document.getElementById("errors").innerHTML = "please select a file";
+    return false;
+  }
 
   document.getElementById("progress").innerHTML = 'loading...';
 
   // Initialize a FileReader
   var reader = new FileReader();
-  var filename = this.files[0].name;
+  var filename = document.getElementById('fileinput').files[0].name;
+
+  console.log(filename);
 
   // Get various config options
   var case_select = document.getElementById('case');
@@ -61,5 +72,5 @@ document.getElementById('fileinput').addEventListener('change', function(e) {
     }, false);
   }
 
-  reader.readAsText(this.files[0]);
-}, false);
+  reader.readAsText(document.getElementById('fileinput').files[0]);
+});

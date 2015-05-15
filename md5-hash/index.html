@@ -54,54 +54,60 @@
 
   <h2>Settings</h2>
 
-  <fieldset>
-    <div class="form-inputs">
-      <label>Column to hash: </label>
-      <input type="text" id="column_to_hash" value="email" />
-    </div>
+  <form id="file-form" onsubmit="return false;">
+    <fieldset>
+      <div class="form-inputs">
+        <label>Column to hash: </label>
+        <input type="text" id="column_to_hash" value="email" />
+      </div>
 
-    <div class="form-inputs">
-      <label>Remove original values: </label>
-      <select id="delete_originals">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </select>
-    </div>
+      <div class="form-inputs">
+        <label>Remove original values: </label>
+        <select id="delete_originals">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
 
-    <div class="form-inputs">
-      <label>Convert email to: </label>
-      <select id="case">
-        <option value="upper">UPPER CASE</option>
-        <option value="lower">lower case</option>
-      </select>
-    </div>
+      <div class="form-inputs">
+        <label>Convert email to: </label>
+        <select id="case">
+          <option value="upper">UPPER CASE</option>
+          <option value="lower">lower case</option>
+        </select>
+      </div>
 
-    <div class="form-inputs">
-      <label>Text delimiter: </label>
-      <select id="quoted_fields">
-        <option value="true">Quotation mark</option>
-        <option value="false">None</option>
-      </select>
-    </div>
+      <div class="form-inputs">
+        <label>Text delimiter: </label>
+        <select id="quoted_fields">
+          <option value="true">Quotation mark</option>
+          <option value="false">None</option>
+        </select>
+      </div>
 
-    <div class="form-inputs">
-      <label>Salt (optional): </label>
-      <input type="text" id="salt" value="" />
-    </div>
+      <div class="form-inputs">
+        <label>Salt (optional): </label>
+        <input type="text" id="salt" value="" />
+      </div>
 
-    <div class="form-inputs">
-      <label>Select a file to hash:</label><br />
-      <input type="file" id="fileinput" />
-    </div>
-  </fieldset>
+      <div class="form-inputs">
+        <label>Select a file to hash:</label><br />
+        <input type="file" id="fileinput" />
+      </div>
 
-  <fieldset>
-    <div>Progress:</div>
-    <pre id="progress"></pre>
+      <div class="form-inputs">
+        <input type="submit" value="Submit">
+      </div>
+    </fieldset>
 
-    <div>Errors:</div>
-    <pre id="errors"></pre>
-  </fieldset>
+    <fieldset>
+      <div>Progress:</div>
+      <pre id="progress"></pre>
+
+      <div>Errors:</div>
+      <pre id="errors"></pre>
+    </fieldset>
+  </form>
 
   <script type="text/javascript" src="index.js"></script>
 </body>

@@ -3,7 +3,7 @@ body {
   margin: auto;
 }
 
-fieldset:not(:last-child), .form-inputs:not(:last-child) {
+fieldset, .form-inputs:not(:last-child) {
   margin-bottom: 1em;
 }
 
