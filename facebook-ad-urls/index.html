@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>URL Generator for DFA Facebook Ads</title>
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body style="margin-top: 1em;">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container" >
+    <form onsubmit="generateUrls(); return false;">
+      <div class="row">
+        <div class="twelve columns">
+          <label style="margin-bottom: 0.1rem;">URL <span style="font-weight: normal;">(Enter a full ActionKit or ActBlue URL)</span></label>
+          <input name="url" _value="https://secure.actblue.com/donate/democracyforamericacontribute" style="width: 100%;" />
+        </div>
+
+        <div class="twelve columns">
+          <label style="margin-bottom: 0.1rem;">Campaign name <span style="font-weight: normal;">(Enter a short name identifying the subject, e.g. "greennewdeal")</span></label>
+          <input name="campaign_name" _value="greennewdeal" style="width: 100%;" />
+        </div>
+
+        <div class="twelve columns">
+          <label style="margin-bottom: 0.1rem;">Test variants <span style="font-weight: normal;">(Optional - enter a comma-separated list of test variants, e.g. "button, no-button")</span></label>
+          <input name="variants" _value="version_a, version_b" style="width: 100%;" />
+        </div>
+
+        <div class="twelve columns">
+          <button type="submit">Generate URLs</button>
+        </div>
+
+        <div id="urls" class="twelve columns">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    generateUrls = function() {
+      var campaignName = document.getElementsByName("campaign_name")[0].value.replace(/[^a-z0-9\-\_]/gi, "");
+      var date = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+      var variants = document.getElementsByName("variants")[0].value.replace(/[^a-z0-9\-\_\,]/gi, "").split(",");
+
+      document.getElementById("urls").innerHTML = "";
+
+      for (i = 0; i < variants.length; i++) {
+        try {
+          var url = new URL(document.getElementsByName("url")[0].value);
+          if (campaignName.length == 0) throw "Enter a campaign name";
+          var refcode = "fbadv-" + campaignName + ".d-" + date + (variants[i].length == 0 ? "" : (".fbvar-" + variants[i]));
+          url.searchParams.append((url.origin.split(".").slice(-2).join(".") == "actblue.com") ? "refcode" : "source", refcode);
+          var html = document.getElementById("urls").innerHTML
+          document.getElementById("urls").innerHTML = html + "<p style='margin-bottom: 0.5rem;'><a href='" + url.href + "'>" + url.href + "</a></p>";
+        } catch(err) {
+          console.log(err);
+          document.getElementById("urls").innerHTML = "<p style='color: #F00;'>" + (err.message || err) + "</p>";
+        }
+      }
+    }
+  </script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
