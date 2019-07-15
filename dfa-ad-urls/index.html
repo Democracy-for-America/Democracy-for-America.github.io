@@ -76,7 +76,7 @@
         try {
           var url = new URL(document.getElementsByName("url")[0].value);
           if (campaignName.length == 0) throw "Enter a campaign name";
-          var refcode = platform + "_paid-" + campaignName + ".d-" + date + (variants[i].length == 0 ? "" : ("." + platform + "var-" + variants[i]));
+          var refcode = platform + "_paid." + campaignName + ".d-" + date + (variants[i].length == 0 ? "" : ("." + platform + "var-" + variants[i]));
           url.searchParams.append((url.origin.split("//")[1].split(".").slice(-2).join(".") == "actblue.com") ? "refcode" : "source", refcode);
           var html = document.getElementById("urls").innerHTML
           document.getElementById("urls").innerHTML = html + "<p style='margin-bottom: 0.5rem;'><a href='" + url.href + "'>" + url.href + "</a></p>";
