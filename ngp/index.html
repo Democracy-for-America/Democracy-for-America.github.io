@@ -133,6 +133,8 @@
         "107774": "sustainer"
       }
 
+      window.ignoredEmails = ['','compliance@democracyforamerica.com','finance@democracyforamerica.com','none@none.com','sharegroup@synetechllc.com','noreply@noreply.com','no@noreply.com','tm@aol.com','nomail@xxx.com','comliance@democracyforamerica.com','richardsa@dnc.org','sdutta@barackobama.com','actionfund@ppfa.org','pacbod@fsround.org','uapif@uanet.org','fanniemae_pac@fanniemae.com','info@21stdems.org','leg@narfe.org','political@nfib.org','salliemae.pac@salliemae.com','pac@citi.com','richardsa@dnc.com','noaddress@noaddress.org']
+
       window.headers = ["email"];
 
       if (fullExport) {
@@ -162,9 +164,9 @@
         var record = records[rowNum];
 
         for (var column in record) {
-          if (column.toLowerCase().includes("email")) {
-            var email = record[column];
-            if (!email) { break; }
+          if (column.trim().toLowerCase().endsWith("email")) {
+            var email = record[column].trim().toLowerCase();
+            if ( !email || ignoredEmails.includes(email) || email.endsWith("example.com") ) { continue; }
 
             emailHash[email] = emailHash[email] || {}
 
@@ -194,7 +196,7 @@
 
             for (var extra of ["extra_1", "extra_2", "extra_3"]) {
               if ( records.columns.includes(extra) ) {
-                emailHash[email][extra] = emailHash[email][extra];
+                emailHash[email][extra] = record[extra];
               }
             }
           }
@@ -209,7 +211,8 @@
         var row = [];
 
         for (var header of headers) {
-          row.push(header == "email" ? email : emailHash[email][header]);
+          var el = '"' + (header == "email" ? email : emailHash[email][header]).replace(/"/g, '""') + '"';
+          row.push(el);
         }
 
         csvContent += row.join(",");
