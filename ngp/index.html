@@ -78,6 +78,14 @@
 
         <li>On the "Targeting" tab, select "Query Library" from the targeting criteria options, and add the "Safe FLE targeting query" with the source code from the importer page. Lastly, check the "Only include users matching the values in the user_id column from this mergequery" checkbox. The targeting options should look like this, when complete:<br/><br/><img src="img/target.png" style="max-width: 100%;"></li>
         </ol>
+
+        <label>Mailing Composition</label>
+
+        <p>When composing a finance-led email, use the following snippet (or similar) to include a salutation:</p>
+
+        <p><span class="mono">Hi{% if user.custom_fields.fle_salutation %} {{ user.custom_fields.fle_salutation }}{% elif user.first_name %} {{ user.first_name }}{% endif %},</span></p>
+
+        <p>Use the <span class="mono">{{ query.extra_1 }}</span>, <span class="mono">{{ query.extra_1 }}</span>, <span class="mono">{{ query.extra_2 }}</span>, and <span class="mono">{{ query.extra_3 }}</span> snippets to include custom fields. To format a dollar amount, use the <span class="mono">floatformat</span> filter: <span class="mono">${{ query.extra_1|floatformat:-2 }}</span></p>
       </div>
 
       <div class="five columns">
@@ -204,15 +212,14 @@
       }
 
       window.csvContent = "data:text/csv;charset=utf-8,";
-      csvContent += headers.join(",");
+      csvContent += headers.join(",").replace("extra_", "action_extra_");
       csvContent += "\r\n";
 
       for (var email in emailHash) {
         var row = [];
 
         for (var header of headers) {
-          var el = '"' + (header == "email" ? email : emailHash[email][header]).replace(/"/g, '""') + '"';
-          row.push(el);
+          row.push('"' + (header == "email" ? email : emailHash[email][header]).replace(/"/g, '""') + '"');
         }
 
         csvContent += row.join(",");
