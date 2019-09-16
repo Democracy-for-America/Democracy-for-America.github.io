@@ -57,9 +57,9 @@
 
         <p>This widget may be used to a) target a finance-led email, or b) match all NGP contacts with ActionKit users & import NGP contact codes (uber/mega/bfd/sustainer tags):</p>
 
-        <p style="margin-left: 24px;">a) If targeting a finance-led email, export an NGP contacts report including columns for <span class="mono">Contact ID</span>, <span class="mono">fle_email_household_salutation</span>, <span class="mono">Salutation</span>, and <span class="mono">First Name</span>. To include arbitrary data, append the <span class="mono">extra_1</span>, <span class="mono">extra_2</span>, and/or <span class="mono">extra_3</span> columns.</p>
+        <p style="margin-left: 24px;">a) If targeting a finance-led email, export an NGP contacts report including columns for <span class="mono">Contact ID</span>, <span class="mono">fle_email_household_salutation</span>, <span class="mono">Salutation</span>, and <span class="mono">First Name</span>, and any email columns you wish to target the FLE to (e.g. <span class="mono">Primary Email</span>, <span class="mono">Home Email</span>, etc.). To include arbitrary data, append the <span class="mono">extra_1</span>, <span class="mono">extra_2</span>, and/or <span class="mono">extra_3</span> columns.</p>
 
-        <p style="margin-left: 24px;">b) If matching all contacts, export an NGP contacts report including columns for <span class="mono">Contact ID</span> and <span class="mono">Contact Code Ids</span>, and select the "full export" option.</p>
+        <p style="margin-left: 24px;">b) If matching all contacts, export an NGP contacts report including columns for <span class="mono">Contact ID</span>, <span class="mono">Contact Code Ids</span> and any email columns you wish to match on (e.g. <span class="mono">Primary Email</span>, <span class="mono">Home Email</span>, etc.), and select the "full export" option.</p>
         
         <hr/>
 
@@ -211,7 +211,8 @@
         }
       }
 
-      window.csvContent = "data:text/csv;charset=utf-8,";
+      window.csvContent = "";
+      // csvContent += "data:text/csv;charset=utf-8,";
       csvContent += headers.join(",").replace("extra_", "action_extra_");
       csvContent += "\r\n";
 
@@ -219,18 +220,22 @@
         var row = [];
 
         for (var header of headers) {
-          row.push('"' + (header == "email" ? email : emailHash[email][header]).replace(/"/g, '""') + '"');
+          var tmp = (header == "email" ? email : emailHash[email][header]);
+          if (Array.isArray(tmp)) { tmp = tmp.join(","); }
+
+          row.push('"' + (tmp || "").replace(/"/g, '""') + '"');
         }
 
         csvContent += row.join(",");
         csvContent += "\r\n";
       }
 
-      var encodedUri = encodeURI(csvContent);
-      var fileName = document.querySelector('input[name=csv]').files[0].name.split(".csv").slice(0, -1).join('.csv') + ".normalized.csv";
+      // var encodedUri = encodeURI(csvContent);
+      var blob = URL.createObjectURL(new Blob([csvContent], {type: "application/octet-stream"}));
+      var fileName = document.querySelector('input[name=csv]').files[0].name.split(" ").join("_").toLowerCase().split(".csv").slice(0, -1).join('.csv') + ".normalized.csv";
 
       d3.select("a#downloadLink")
-        .attr("href", encodedUri)
+        .attr("href", blob)
         .attr("download", fileName);
 
       d3.select("div#downloadDiv")
