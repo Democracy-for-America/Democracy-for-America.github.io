@@ -19,3 +19,11 @@ if (!String.prototype.startsWith) {
     }
   });
 }
+
+// randomly order Bernie & Warren banner images
+$(document).ready(function() {
+  var rando = Math.random();
+  if (rando < 0.5) {
+    $("#sanders").detach().appendTo('#bannerRow');
+  }  
+});

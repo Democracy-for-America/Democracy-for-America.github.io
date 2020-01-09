@@ -3,6 +3,8 @@ body { color: #FFF; }
 .section { padding: 3em 0px; }
 .blue-bg { background-color: #228; }
 .red-bg { background-color: #822; }
+.dk-gry-bg { background-color: #333; }
+.lt-gry-bg { background-color: #999; }
 .white-text { color: #FFF !important; }
 .center { text-align: center !important; }
 .arvo { font-family: "Arvo" !important; }
@@ -13,3 +15,66 @@ body { color: #FFF; }
 
 .button-fb, .button-tw, .button-donate { display: inline-block; }
 .button-fb > img, .button-tw > img, .button-donate > img { display: inline; }
+
+.banner {
+  background-color: #004A80;
+  padding: 0;
+  min-height: 200px;
+}
+
+.banner-image {
+  box-sizing: border-box;
+  min-height: 200px;
+  background-attachment: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  margin: 0;
+}
+
+#sanders {
+  background-image: url("../images/sanders.jpg");
+}
+
+#warren {
+  background-image: url("../images/warren.jpg");
+}
+
+#logo img {
+  margin: 8% 6%;
+}
+
+@media (max-width: 549px) {
+  #logo {
+    min-height: 100px;
+  }
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  .banner {
+    min-height: auto;
+  }  
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  .banner, .banner-image {
+    min-height: 130px;
+  } 
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .banner, .banner-image {
+    min-height: 170px;
+  }   
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .banner, .banner-image {
+    min-height: 202px;
+  }   
+}
+
