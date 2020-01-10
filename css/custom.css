@@ -7,8 +7,9 @@ body { color: #FFF; }
 .lt-gry-bg { background-color: #999; }
 .white-text { color: #FFF !important; }
 .center { text-align: center !important; }
-.arvo { font-family: "Arvo" !important; }
+/* .arvo { font-family: "Arvo" !important; } */
 .lato { font-family: "Lato" !important; }
+.calistoga { font-family: "Calistoga" !important; font-weight: normal !imporant; }
 
 #can_embed_form_inner h2, #can_embed_form_inner h3, #can_embed_form_inner h4,
 #logo_wrap, .international_link-wrap, #action_info { display: none !important; }
