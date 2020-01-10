@@ -78,7 +78,7 @@ body { color: #FFF; }
 
 /* Action Network CSS Overrides */
 #can_embed_form.can_float #form_col1, #can_embed_form.can_float #form_col2 { width: 100% !important; }
-#can_embed_form h2, #can_embed_form h3, #can_embed_form h4,
+#can_embed_form_inner > h2, #can_embed_form_inner > h3, #can_embed_form_inner > h4,
 #can_embed_form .international_link-wrap, #form_col2 .floatlabel-wrapper, #action_info, #logo_wrap {
   display: none !important; }
 #can_embed_form #d_sharing { display: none !important; }
