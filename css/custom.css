@@ -8,12 +8,8 @@ body { color: #FFF; }
 .lt-gry-bg { background-color: #999; }
 .white-text { color: #FFF !important; }
 .center { text-align: center !important; }
-/* .arvo { font-family: "Arvo" !important; } */
 .lato { font-family: "Lato" !important; }
 .calistoga { font-family: "Calistoga" !important; font-weight: normal !imporant; }
-
-#can_embed_form_inner h2, #can_embed_form_inner h3, #can_embed_form_inner h4,
-#logo_wrap, .international_link-wrap, #action_info { display: none !important; }
 
 .button-fb, .button-tw, .button-donate { display: inline-block; }
 .button-fb > img, .button-tw > img, .button-donate > img { display: inline; }
@@ -80,3 +76,11 @@ body { color: #FFF; }
   }   
 }
 
+/* Action Network CSS Overrides */
+#can_embed_form.can_float #form_col1, #can_embed_form.can_float #form_col2 { width: 100% !important; }
+#can_embed_form h2, #can_embed_form h3, #can_embed_form h4,
+#can_embed_form .international_link-wrap, #form_col2 .floatlabel-wrapper, #action_info, #logo_wrap {
+  display: none !important; }
+#can_embed_form #d_sharing { display: none !important; }
+#form_col1::after { display: block; margin-bottom: 12px; font-size: 12px; line-height: 1.2; color: #888;
+  content: "Thank you for joining our campaign to nominate a progressive candidate. By providing your email address and/or phone number you consent to receive recurring emails and mobile alerts from members of the Progressives Unite 2020 Coalition. Message & Data Rates May Apply. Text HELP for Info. Text STOP to opt out."; }
