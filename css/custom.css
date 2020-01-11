@@ -1,12 +1,15 @@
 body { color: #FFF; }
 
 .section { padding: 3em 0px; }
+.padding-1em { padding: 1em !important; }
 .blue-bg { background-color: #228; }
 .cyan-bg { background-color: #004A80; }
 .red-bg { background-color: #822; }
 .dk-gry-bg { background-color: #333; }
 .lt-gry-bg { background-color: #999; }
+.white-bg { background-color: #FFF; }
 .white-text { color: #FFF !important; }
+.black-text { color: #333 !important; }
 .center { text-align: center !important; }
 .lato { font-family: "Lato" !important; }
 .calistoga { font-family: "Calistoga" !important; font-weight: normal !imporant; }
@@ -79,8 +82,10 @@ body { color: #FFF; }
 /* Action Network CSS Overrides */
 #can_embed_form.can_float #form_col1, #can_embed_form.can_float #form_col2 { width: 100% !important; }
 #can_embed_form_inner > h2, #can_embed_form_inner > h3, #can_embed_form_inner > h4,
-#can_embed_form .international_link-wrap, #form_col2 .floatlabel-wrapper, #action_info, #logo_wrap {
+#can_embed_form .international_link-wrap, #form_col2 .floatlabel-wrapper, #action_info, #logo_wrap, .can_thank_you_wrap {
   display: none !important; }
 #can_embed_form #d_sharing { display: none !important; }
 #form_col1::after { display: block; margin-bottom: 12px; font-size: 12px; line-height: 1.2; color: #888;
   content: "Thank you for joining our campaign to nominate a progressive candidate. By providing your email address and/or phone number you consent to receive recurring emails and mobile alerts from members of the Progressives Unite 2020 Coalition. Message & Data Rates May Apply. Text HELP for Info. Text STOP to opt out."; }
+#thanks { display: none; }
+#can-petition-area-progressive-unity-pledge[style*="auto"] + #thanks { display: block; }
