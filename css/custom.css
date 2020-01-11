@@ -1,18 +1,87 @@
 body { color: #FFF; }
 
 .section { padding: 3em 0px; }
-.blue-bg { background-color: #228; }
+.blue-bg { background-color: #18274e; }
 .cyan-bg { background-color: #004A80; }
+.lt-cyan-bg { background-color: #F0FAFA; }
 .red-bg { background-color: #822; }
 .dk-gry-bg { background-color: #333; }
 .lt-gry-bg { background-color: #999; }
 .white-text { color: #FFF !important; }
 .center { text-align: center !important; }
 .lato { font-family: "Lato" !important; }
-.calistoga { font-family: "Calistoga" !important; font-weight: normal !imporant; }
+.calistoga { font-family: "Calistoga" !important; font-weight: 300 !imporant; }
+
+.header {
+  color: #c2f0f9;
+  font-family: "Calistoga" !important; 
+  font-weight: 300 !imporant;
+}
+
+.mainHeader {
+  font-size: 3em; 
+  line-height: 1em;
+}
 
 .button-fb, .button-tw, .button-donate { display: inline-block; }
 .button-fb > img, .button-tw > img, .button-donate > img { display: inline; }
+
+#strategyText h3 {
+  font-size: 1.75em;
+  line-height: 1.2em;
+  font-family: "Calistoga" !important; 
+  font-weight: 300 !imporant;
+  margin-bottom: 0;
+}
+
+#strategyText h5, #strategyText p {
+  line-height: 1.4em;
+  margin-bottom: 0.75em;
+}
+
+#strategyText h5 {
+  color: #FFFAC0;
+}
+
+#strategyText .step span {
+  text-align: right;
+  background-color: #305b95;
+  color: #c8fca4;
+  font-weight: bold;
+  padding: 2px 8px 4px;
+  margin-right: 12px;
+  border-radius: 4px;
+  width: 20%;
+  display: block;
+  float: left;
+}
+
+#strategyText a,
+#strategyText a:visited {
+  color: white;
+}
+
+#strategyText a:hover {
+  color: #FFA;
+}
+
+#pledgeText {
+  padding: 1em 1em 0; 
+  color: black; 
+  line-height: 1.2em;
+}
+
+#pledgeText h2 {
+  font-size: 2em; 
+  line-height: 1.2em;
+  font-family: "Calistoga" !important; 
+  font-weight: 300 !imporant;
+  color: #004A80;
+}  
+
+#pledgeText p {
+  margin-bottom: 0.75em;
+}
 
 .banner {
   background-color: #004A80;
@@ -45,6 +114,20 @@ body { color: #FFF; }
 @media (max-width: 549px) {
   #logo {
     min-height: 100px;
+  }
+  
+  .mainHeader {
+    font-size: 2em; 
+  }
+  
+  #strategyText .step {
+    font-size: 0.9em;
+  }
+  
+  #strategyText .step span {
+    width: 16%;
+    padding: 8px 8px 4px;
+    line-height: 1.2em;
   }
 }
 
