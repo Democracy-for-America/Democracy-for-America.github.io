@@ -1,4 +1,4 @@
-body { color: #FFF; }
+body { color: #000; }
 
 .section { padding: 3em 0px; }
 .padding-1em { padding: 1em !important; }
@@ -16,7 +16,7 @@ body { color: #FFF; }
 .calistoga { font-family: "Calistoga" !important; font-weight: 300 !imporant; }
 
 .header {
-  color: #c2f0f9;
+  color: #004A80;
   font-family: "Calistoga" !important; 
   font-weight: 300 !imporant;
 }
@@ -43,10 +43,6 @@ body { color: #FFF; }
   margin-bottom: 0.75em;
 }
 
-#strategyText h5 {
-  color: #FFFAC0;
-}
-
 #strategyText .step span {
   text-align: right;
   background-color: #305b95;
@@ -62,11 +58,20 @@ body { color: #FFF; }
 
 #strategyText a,
 #strategyText a:visited {
-  color: white;
+  color: #069;
 }
 
 #strategyText a:hover {
-  color: #FFA;
+  color: #09A;
+}
+
+.fact {
+  position:absolute; 
+  top: 0; 
+  left: 0; 
+  padding: 1em; 
+  background-color: white;
+  color: #072;
 }
 
 #pledgeText {

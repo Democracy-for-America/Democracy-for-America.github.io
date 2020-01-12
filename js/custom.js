@@ -33,5 +33,13 @@ $(document).ready(function() {
     } else {
       $("#strategyText").detach().prependTo("#strategyPledge");      
     }    
-  });  
+  });
+  
+  function shuffleFacts() {
+    $('#factContainer div:first-child').hide().detach().appendTo("#factContainer").fadeIn(1000);    
+  };
+  
+  setInterval(shuffleFacts, 8000);
+
+  
 });
