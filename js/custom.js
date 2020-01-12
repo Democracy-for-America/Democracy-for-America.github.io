@@ -36,7 +36,7 @@ $(document).ready(function() {
   });
   
   function shuffleFacts() {
-    $('#factContainer div:first-child').hide().detach().appendTo("#factContainer").fadeIn(1000);    
+    $('#factContainer div:first-child').hide().detach().appendTo("#factContainer").fadeIn(1000);
   };
   
   setInterval(shuffleFacts, 8000);

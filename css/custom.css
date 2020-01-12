@@ -16,35 +16,36 @@ body { color: #000; }
 .calistoga { font-family: "Calistoga" !important; font-weight: 300 !imporant; }
 
 .header {
-  color: #004A80;
+  font-size: 2em; 
+  line-height: 1.2em;
   font-family: "Calistoga" !important; 
   font-weight: 300 !imporant;
+  color: #004A80;
+  margin-bottom: 0.2em;
+  text-align: center !important;
 }
 
 #unityPhoto {
+  margin-bottom: 1em;
+  font-size: 0.3em;
+  text-align: right;
+}
+
+#unityPhoto img {
   display: block;
   width: 100%;
-  margin-bottom: 1em;
 }
 
 .button-fb, .button-tw, .button-donate { display: inline-block; }
 .button-fb > img, .button-tw > img, .button-donate > img { display: inline; }
 
-#strategyText h3 {
-  font-size: 1.75em;
+#strategyText {
   line-height: 1.2em;
-  font-family: "Calistoga" !important; 
-  font-weight: 300 !imporant;
-  margin-bottom: 0;
-}
-
-#strategyText h5, #strategyText p {
-  line-height: 1.4em;
   margin-bottom: 0.75em;
 }
 
 #strategyText .step span {
-  text-align: right;
+  text-align: center;
   background-color: #305b95;
   color: #c8fca4;
   font-weight: bold;
@@ -65,12 +66,19 @@ body { color: #000; }
   color: #09A;
 }
 
+#factContainer {
+  position: relative; 
+  height: 180px;
+}
+
 .fact {
-  position:absolute; 
+  height: 180px;
+  position:absolute;
   top: 0; 
   left: 0; 
   padding: 1em; 
-  background-color: white;
+  background-color: #F0FAFA;
+  border-radius: 10px;
   color: #072;
 }
 
@@ -81,11 +89,6 @@ body { color: #000; }
 }
 
 #pledgeText h2 {
-  font-size: 2em; 
-  line-height: 1.2em;
-  font-family: "Calistoga" !important; 
-  font-weight: 300 !imporant;
-  color: #004A80;
 }  
 
 #pledgeText p {
@@ -95,14 +98,6 @@ body { color: #000; }
 .banner {
   background-color: #004A80;
   padding: 0;
-}
-
-#sanders {
-  background-image: url("../images/sanders.jpg");
-}
-
-#warren {
-  background-image: url("../images/warren.jpg");
 }
 
 #logo img {
@@ -127,6 +122,15 @@ body { color: #000; }
     padding: 8px 8px 4px;
     line-height: 1.2em;
   }
+}
+
+#motto {
+  color: white;
+  font-size: 2.25em; 
+  line-height: 1.2em;
+  font-family: "Calistoga" !important; 
+  font-weight: 300 !imporant;
+  text-align: center !important;
 }
 
 /* Larger than mobile */
