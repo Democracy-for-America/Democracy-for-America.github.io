@@ -20,10 +20,18 @@ if (!String.prototype.startsWith) {
   });
 }
 
-// randomly order Bernie & Warren banner images
+// place signup form before text on mobile
 $(document).ready(function() {
-  var rando = Math.random();
-  if (rando < 0.5) {
-    $("#sanders").detach().appendTo('#bannerRow');
-  }  
+
+  if (window.matchMedia('(max-width: 549px)').matches) {
+    $("#strategyText").detach().appendTo("#strategyPledge");
+  }
+  
+  $( window ).resize(function() {
+    if (window.matchMedia('(max-width: 549px)').matches) {
+      $("#strategyText").detach().appendTo("#strategyPledge");
+    } else {
+      $("#strategyText").detach().prependTo("#strategyPledge");      
+    }    
+  });  
 });

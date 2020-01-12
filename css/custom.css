@@ -21,9 +21,10 @@ body { color: #FFF; }
   font-weight: 300 !imporant;
 }
 
-.mainHeader {
-  font-size: 3em; 
-  line-height: 1em;
+#unityPhoto {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 .button-fb, .button-tw, .button-donate { display: inline-block; }
@@ -89,17 +90,6 @@ body { color: #FFF; }
 .banner {
   background-color: #004A80;
   padding: 0;
-  min-height: 200px;
-}
-
-.banner-image {
-  box-sizing: border-box;
-  min-height: 200px;
-  background-attachment: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 200%;
-  margin: 0;
 }
 
 #sanders {
@@ -136,30 +126,18 @@ body { color: #FFF; }
 
 /* Larger than mobile */
 @media (min-width: 400px) {
-  .banner {
-    min-height: auto;
-  }  
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-  .banner, .banner-image {
-    min-height: 130px;
-  } 
 }
 
 /* Larger than tablet */
-@media (min-width: 750px) {
-  .banner, .banner-image {
-    min-height: 170px;
-  }   
+@media (min-width: 750px) { 
 }
 
 /* Larger than desktop */
-@media (min-width: 1000px) {
-  .banner, .banner-image {
-    min-height: 202px;
-  }   
+@media (min-width: 1000px) {  
 }
 
 /* Action Network CSS Overrides */
