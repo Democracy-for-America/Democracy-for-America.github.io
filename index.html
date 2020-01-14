@@ -21,14 +21,14 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="https://actionnetwork.org/css/style-embed-v3.css">
+  <link rel="stylesheet" href="css/ak-forms.css">
   <link rel="stylesheet" href="css/custom.css?202001121512">
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="js/custom.js?202001121525"></script>
-  <script src='https://actionnetwork.org/widgets/v3/petition/progressive-unity-pledge?format=js&source=widget&clear_id=true'></script>
+  <script type="text/javascript" src="https://act.democracyforamerica.com/resources/actionkit.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -42,6 +42,9 @@
   <meta property="og:image" content="https://progressivesunite2020.com/images/ProgressivesUniteOG.png">
 </head>
 <body>
+  <script type="text/javascript">
+      actionkit.forms.initPage()
+  </script>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -82,8 +85,19 @@
             <p>We pledge to focus our fight for the nomination against candidates supported by the corporate wing, instead of fighting each other.</p>
             <p>We pledge to come together in state caucuses, primaries and conventions from the first vote in Iowa to the last vote at the DNC Convention in Wisconsin to ensure a progressive wins the nomination and America elects a Progressive President!</p>
           </div>
-          <div id='can-petition-area-progressive-unity-pledge' style='width: 100%'></div>
-          <div id="thanks" class="white-bg black-text padding-1em">
+
+          <form class="actionkit-widget" name="signup" action="https://act.democracyforamerica.com/act/" onsubmit="this.submitted=1;return false">
+          <input type="hidden" name="source" id="id_source" value="">
+          <input type="hidden" name="page" value="progressive-unity-pledge">
+          <div class="akFormField"><input value="" id="id_name" type="text" name="name" placeholder="Name" /><div class="errorMsg"></div></div>
+          <div class="akFormField"><input value="" id="id_zip" type="text" name="zip" placeholder="Zip" /><div class="errorMsg"></div></div> 
+          <div class="akFormField"><input value="" id="id_email" type="text" name="email" placeholder="Email" /><div class="errorMsg"></div></div> 
+          <div class="akFormField"><input value="" id="id_phone" type="text" name="phone" placeholder="Mobile Phone (optional)" /><div class="errorMsg"></div></div>
+          <p class="disclaimer">Thank you for joining our campaign to nominate a progressive candidate. By providing your email address and/or phone number you consent to receive recurring emails and mobile alerts from members of the Progressives Unite 2020 Coalition. Message & Data Rates May Apply. Text HELP for Info. Text STOP to opt out.</p>
+          <input class="akSubmit" type="submit" value="ADD YOUR NAME">
+          </form>
+
+          <div id="signup-replacement" style="display: none;" class="white-bg black-text padding-1em">
             <h4 class="center">
               Share the 2020 Progressive Unity Pledge:<br/>
               <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fprogressivesunite2020.com%3Fsource%3Dfacebook" target="_blank" onclick="return openPopup(this)"><img src="images/facebook.png" alt="Facebook"></a>
@@ -91,9 +105,26 @@
             </h4>
             <h4 class="center">
               Support our work:<br/>
-              <a href="https://secure.actblue.com/donate/unite2020" target="_blank"><img src="images/actblue.png" alt="Donate"></a>
+              <a class="donate" href="https://secure.actblue.com/donate/unite2020" target="_blank"><img src="images/actblue.png" alt="Donate"></a>
             </h4>
           </div>
+
+          <script>
+            // set donate URL for partner organizations
+            var donateUrls = {
+              "presente": "https://act.presente.org/donate/donate/"
+            };
+
+            var source = getUrlParameter("source");
+            
+            for (var key of Object.keys(donateUrls)) {
+              if (source.startsWith(key)) {
+                $(".donate").attr("href", donateUrls[key]);
+                $("img[alt=Donate]").attr("src", "images/donate.png");
+              }
+            }
+          </script>
+          <script src="https://act.democracyforamerica.com/samples/widget.js"></script>
         </div>
         
       </div>
@@ -137,6 +168,10 @@
     </div>
   </div>
 
+  <script type="text/javascript">
+      actionkit.forms.contextRoot = 'http://act.democracyforamerica.com/context/';
+      actionkit.forms.initForm('act');
+  </script>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
