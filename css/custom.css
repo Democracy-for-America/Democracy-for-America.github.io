@@ -95,11 +95,6 @@ body { color: #000; }
   margin-bottom: 0.75em;
 }
 
-#contactDisclaimer {
-  font-size: 12px;
-  color: #999;
-}
-
 .banner {
   background-color: #004A80;
   padding: 0;
@@ -154,46 +149,13 @@ body { color: #000; }
 @media (min-width: 1000px) {  
 }
 
-/* ActionKit CSS Overrides */
-.actionkit-widget {
-  margin-bottom: 0;
-  padding: 1em;
-  background-color: #FFF;
-  border: 1px solid #CCC;
-}
-
-.akFormField { margin-bottom: 1em; }
-.akFormField input[type=text] { width: 100%; border-radius: 0px; margin-bottom: 0px; }
-
-.akFormField.error input[type=text] {
-  background-color: #FCC !important;
-  border: 1px solid #F00 !important;
-}
-
-.akFormField.error .errorMsg {
-  color: #F00;
-}
-
-.disclaimer { margin-bottom: 1.2em; font-size: 12px; color: #777; letter-spacing: -0.2px; }
-
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  width: 100%;
-  font-size: 14px;
-  color: #FFF;
-  background-color: #cd3a18;
-  border: none;
-  border-radius: 0px;
-}
-
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
-  color: #FFF;
-  background-color: #e7390e;
-}
+/* Action Network CSS Overrides */
+#can_embed_form.can_float #form_col1, #can_embed_form.can_float #form_col2 { width: 100% !important; }
+#can_embed_form_inner > h2, #can_embed_form_inner > h3, #can_embed_form_inner > h4,
+#can_embed_form .international_link-wrap, #form_col2 .floatlabel-wrapper, #action_info, #logo_wrap, .can_thank_you_wrap {
+  display: none !important; }
+#can_embed_form #d_sharing { display: none !important; }
+#form_col1::after { display: block; margin-bottom: 12px; font-size: 12px; line-height: 1.2; color: #888;
+  content: "Thank you for joining our campaign to nominate a progressive candidate. By providing your email address and/or phone number you consent to receive recurring emails and mobile alerts from members of the Progressives Unite 2020 Coalition. Message & Data Rates May Apply. Text HELP for Info. Text STOP to opt out."; }
+#thanks { display: none; }
+#can-petition-area-progressive-unity-pledge[style*="auto"] + #thanks { display: block; }

@@ -43,17 +43,3 @@ $(document).ready(function() {
 
   
 });
-
-// Display ActionKit form validation errors
-function onWidgetError(f, response) {
-  $(".akFormField").removeClass("error");
-  $(".errorMsg").text("");
-
-  for ( error in response.errors ) {
-    var wrapper = $("input[name=" + error + "]").parent();
-    console.log(wrapper)
-    wrapper.find(".errorMsg").text(response.errors[error][0]);
-    wrapper.addClass("error");
-  }
-  return false;
-}
