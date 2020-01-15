@@ -104,6 +104,12 @@ body { color: #000; }
   margin: 8% 6%;
 }
 
+.partner {
+  display: inline-block; 
+  vertical-align: middle; 
+  margin: 12px 16px;
+}
+
 @media (max-width: 549px) {
   #logo {
     min-height: 100px;
