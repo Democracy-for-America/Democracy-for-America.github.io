@@ -39,7 +39,7 @@ body { color: #000; }
 .button-fb, .button-tw, .button-donate { display: inline-block; }
 .button-fb > img, .button-tw > img, .button-donate > img { display: inline; }
 
-#strategyText {
+#strategyText, #strategyText p {
   line-height: 1.2em;
   margin-bottom: 0.75em;
 }
