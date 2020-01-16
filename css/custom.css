@@ -44,6 +44,10 @@ body { color: #000; }
   margin-bottom: 0.75em;
 }
 
+#strategyText p.step  {
+  margin: 1.5em 0;
+}
+
 #strategyText .step span {
   text-align: center;
   background-color: #305b95;
