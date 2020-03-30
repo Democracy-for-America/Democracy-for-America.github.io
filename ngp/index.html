@@ -213,7 +213,7 @@
 
       window.csvContent = "";
       // csvContent += "data:text/csv;charset=utf-8,";
-      csvContent += headers.join(",").replace("extra_", "action_extra_");
+      csvContent += headers.join(",").split("extra_").join("action_extra_");
       csvContent += "\r\n";
 
       for (var email in emailHash) {
