@@ -196,7 +196,7 @@
               emailHash[email]["user_ngp_contact_codes"] = emailHash[email]["user_ngp_contact_codes"] || [];
 
               for (var contactCode of record["Contact Code Ids"].split(",")) {
-                if ( ngpContactCodes[contactCode] && !emailHash[email]["user_ngp_contact_codes"].includes(contactCode) ) {
+                if ( ngpContactCodes[contactCode] && !emailHash[email]["user_ngp_contact_codes"].includes(ngpContactCodes[contactCode]) ) {
                   emailHash[email]["user_ngp_contact_codes"].push(ngpContactCodes[contactCode]);
                 }
               }
